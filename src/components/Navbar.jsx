@@ -10,7 +10,7 @@ const Menu = [
   {
     id: 2,
     name: "Services",
-    link: "/#services",
+    link: "/#card",
   },
   {
     id: 3,

@@ -3,6 +3,8 @@ import AOS from "aos";
 import "../node_modules/aos/dist/aos.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Services from "./components/Services";
+import Detail from "./components/Detail";
 
 const App = () => {
   useEffect(() => {
@@ -19,6 +21,8 @@ const App = () => {
       <div className="overflow-x-hidden">
         <Navbar />
         <Home />
+        <Services />
+        <Detail />
       </div>
     </>
   );
