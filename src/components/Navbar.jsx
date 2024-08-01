@@ -24,16 +24,21 @@ const Navbar = () => {
     <div className="bg-gradient-to-r from-secondary to-secondary/90 text-white">
       <div className="container py-2">
         <div className="flex justify-between items-center gap-4">
-          <div className="">
+          <div data-aos="fade-down" data-aos-once="true">
             <a
               href="#"
-              className="font-bold text-2xl sm:text-2xl flex justify-center items-center gap-2 tracking-wider font-gupter"
+              className="font-bold text-2xl sm:text-2xl flex justify-center items-center gap-2 tracking-wider font-serif"
             >
               <img src={Logo} alt="Logo" srcset="" className="w-14" />
-              Coffee Cafe
+              COFFEE CAFE
             </a>
           </div>
-          <div className="flex justify-between items-center gap-4">
+          <div
+            className="flex justify-between items-center gap-4"
+            data-aos="fade-down"
+            data-aos-once="true"
+            data-aos-delay="300"
+          >
             <ul className="hidden sm:flex items-center gap-4">
               {Menu.map((data, index) => (
                 <li key={index}>
@@ -47,7 +52,7 @@ const Navbar = () => {
               ))}
               <li></li>
             </ul>
-            <button className="bg-primary/70 px-5 py-2 rounded-full hover:scale-105 duration-200 flex items-center gap-3">
+            <button className="bg-primary/70 px-5 py-2 rounded-full hover:scale-105 duration-200 flex items-center gap-3 font-gupter">
               Order
               <FaCoffee className="text-xl cursor-pointer" />
             </button>

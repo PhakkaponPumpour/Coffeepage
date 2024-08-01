@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         gupter: ["Gupter", "erif"],
+        bebas: ["Bebas Neue", "sans - serif"],
       },
       colors: {
         primary: "#854d3d",

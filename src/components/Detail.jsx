@@ -18,11 +18,11 @@ const bgImage = {
 const Detail = () => {
   return (
     <>
-      <div style={bgImage}>
+      <div style={bgImage} id="about">
         <div className="container min-h-[550px] flex justify-center items-center py-12 sm:py-0">
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
             {/* Image section */}
-            <div>
+            <div data-aos="zoom-in">
               <img
                 src={detailImg}
                 alt="detailImg"
@@ -30,7 +30,10 @@ const Detail = () => {
               />
             </div>
             {/* Text section */}
-            <div className="flex flex-col justify-center gap-6 sm:pt-0">
+            <div
+              className="flex flex-col justify-center gap-6 sm:pt-0"
+              data-aos="fade-up"
+            >
               <h1 className="text-3xl sm:text-4xl font-bold font-gupter">
                 Premium Blen Coffee
               </h1>
@@ -40,7 +43,7 @@ const Detail = () => {
                 sapiente adipisci facilis facere voluptates eius consequatur
                 neque ratione quasi exercitationem.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-5">
                   <div className="flex items-center gap-3">
                     <GrSecure className="text-2xl h-12 w-12 shadow-sm p-3 rounded-full bg-red-100" />
@@ -55,7 +58,10 @@ const Detail = () => {
                     <span>Cold Coffee</span>
                   </div>
                 </div>
-                <div className=" border-l-4 border-primary/50 pl-6 space-y-3">
+                <div
+                  className="border-t-4 md:border-t-0 md:border-l-4 border-primary/50 pt-6 md:pt-0 md:pl-6 space-y-3"
+                  data-aos="fade-right"
+                >
                   <h1 className="text-2xl font-semibold font-gupter">
                     Tea Lover
                   </h1>
