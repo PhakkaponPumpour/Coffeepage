@@ -1,5 +1,4 @@
 import React from "react";
-import FooterBg from "../assets/website/coffee-footer.jpg";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const FooterLink = [
@@ -21,27 +20,37 @@ const FooterLink = [
   },
 ];
 
-const bgImg = {
-  backgroundImage: `url(${FooterBg})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  minHeight: "400px",
-  width: "100%",
-};
+const contact = [
+  {
+    title: "CV",
+    link: "https://drive.google.com/file/d/1aJ800tZq8tBuXYqXemLrk-MJoAaUdghD/view?usp=sharing",
+  },
+  {
+    title: "Portfolio Website",
+    link: "https://portfoliophakkapon.netlify.app/",
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/PhakkaponPumpour",
+  },
+  {
+    title: "Address",
+    link: "https://maps.app.goo.gl/HU7JbMEEf6FSpu3L9",
+  },
+];
 
 const Footer = () => {
   return (
-    <div style={bgImg} className="text-white">
+    <div className="text-white bg-desert">
       <div className="bg-black/40 min-h-[400px]">
         <div className="container grid md:grid-cols-3 pb-20 pt-5 ">
           {/* detail */}
           <div className="py-8 px-4">
             <a
               href="#"
-              className="font-semibold font-gupter tracking-widest text-2xl sm:text-3xl"
+              className="font-semibold flex font-gupter tracking-widest text-2xl sm:text-3xl"
             >
-              Phakkapon Cafe ♥
+              Phakkapon Cafe <p className="text-red-500">♥</p>
             </a>
             <p className="pt-4">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -60,9 +69,7 @@ const Footer = () => {
           {/* links */}
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
             <div className="py-8 px-4">
-              <h1 className="text-xl font-semibold sm:text-left mb-3">
-                FooterLink
-              </h1>
+              <h1 className="text-xl font-semibold sm:text-left mb-3">Link</h1>
               <ul className="space-y-3">
                 {FooterLink.map((data, index) => {
                   return (
@@ -83,10 +90,10 @@ const Footer = () => {
             </div>
             <div className="py-8 px-4">
               <h1 className="text-xl font-semibold sm:text-left mb-3">
-                Quick Links
+                Contact
               </h1>
               <ul className="space-y-3">
-                {FooterLink.map((data, index) => {
+                {contact.map((data, index) => {
                   return (
                     <li
                       key={index}
@@ -95,6 +102,7 @@ const Footer = () => {
                       <a
                         href={data.link}
                         className=" inline-block hover:scale-105 duration-200"
+                        target="_blank"
                       >
                         {data.title}
                       </a>
@@ -105,18 +113,21 @@ const Footer = () => {
             </div>
             <div className="py-8 px-4 col-span-2 sm:col-auto">
               <h1 className=" text-xl font-semibold sm:text-left mb-3">
-                Address
+                Social
               </h1>
               <p className=" mb-3 ">Phakkapon Pumpour, Thailand</p>
               <p className=" mb-3">phakkaponpumpour@gmail.com</p>
-              <div className="space-x-3 mt-6">
+              <div className=" flex space-x-3 mt-6">
                 <a href="">
                   <FaFacebook className=" text-3xl inline-block hover:scale-105 duration-200" />
                 </a>
                 <a href="">
                   <FaInstagram className=" text-3xl inline-block hover:scale-105 duration-200" />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.linkedin.com/in/phakkapon-pumpour/"
+                  target="_blank"
+                >
                   <FaLinkedin className=" text-3xl inline-block hover:scale-105 duration-200" />
                 </a>
               </div>
